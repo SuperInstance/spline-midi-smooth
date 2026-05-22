@@ -1,0 +1,4 @@
+# spline-midi-smooth
+numpy>=1.24
+mido>=1.3
+pytest>=7.0
