@@ -81,6 +81,8 @@ def cubic_hermite(
     ys = np.array([p[1] for p in points], dtype=float)
     if np.any(np.diff(xs) <= 0):
         raise ValueError("x coordinates must be strictly increasing")
+    if np.any(~np.isfinite(xs)) or np.any(~np.isfinite(ys)):
+        raise ValueError("Input contains NaN or Inf values")
 
     ts = _finite_difference_tangents(xs, ys)
 
@@ -150,6 +152,8 @@ def catmull_rom(
     ys = np.array([p[1] for p in points], dtype=float)
     if np.any(np.diff(xs) <= 0):
         raise ValueError("x coordinates must be strictly increasing")
+    if np.any(~np.isfinite(xs)) or np.any(~np.isfinite(ys)):
+        raise ValueError("Input contains NaN or Inf values")
 
     n = len(xs)
     ts = np.empty_like(ys, dtype=float)
@@ -257,6 +261,8 @@ def bspline(
 
     xs = np.array([p[0] for p in points], dtype=float)
     ys = np.array([p[1] for p in points], dtype=float)
+    if np.any(~np.isfinite(xs)) or np.any(~np.isfinite(ys)):
+        raise ValueError("Input contains NaN or Inf values")
     n = len(xs) - 1  # control point index 0..n
 
     # Normalise parameter to [0, 1] based on original x span
