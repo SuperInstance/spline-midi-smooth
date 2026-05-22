@@ -10,3 +10,7 @@ spline_midi_smooth.egg-info/SOURCES.txt
 spline_midi_smooth.egg-info/dependency_links.txt
 spline_midi_smooth.egg-info/requires.txt
 spline_midi_smooth.egg-info/top_level.txt
+tests/test_anti_alias.py
+tests/test_deadband_spline.py
+tests/test_interpolation.py
+tests/test_midi_processor.py
