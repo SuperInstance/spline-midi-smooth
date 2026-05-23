@@ -162,6 +162,12 @@ print(f"Deadband guarantee: {proven}")  # True
     └───────────────┘
 ```
 
+## Documentation
+
+- [User Guide](docs/USER-GUIDE.md) — Complete usage documentation
+- [Developer Guide](docs/DEVELOPER-GUIDE.md) — Contributing and internals
+- [Examples](examples/) — Pitch bend and volume smoothing demos
+
 ## Related repos
 
 - [holonomy-harmony](https://github.com/SuperInstance/holonomy-harmony) — Chord progression analysis via holonomy
